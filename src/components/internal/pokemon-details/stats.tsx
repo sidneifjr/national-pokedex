@@ -19,7 +19,11 @@ export const PokemonDetailsStats = ({ value }: ChartTypes) => {
 
       {value.map((item) => {
         return (
-          <p key={crypto.randomUUID()} className="flex flex-1 justify-between">
+          <p
+            data-testid={item.stat.name}
+            key={crypto.randomUUID()}
+            className="flex flex-1 justify-between"
+          >
             <strong className="capitalize tracking-tight">
               {replaceDashWithWhiteSpace(item.stat.name)}:
             </strong>
