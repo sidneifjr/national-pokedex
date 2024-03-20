@@ -12,6 +12,7 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 - [x] Linting
 - [x] Charts
 - [x] Unit Testing
+- [x] Animation on page change.
 
 ## Running
 
