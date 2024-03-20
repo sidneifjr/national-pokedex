@@ -5,6 +5,7 @@ import pokeball from '@/assets/pokeball.png'
 import { env } from '@/env'
 
 import { Loader } from '../loader'
+import { MotionWrapper } from '../motion-wrapper'
 import { PokemonCard } from './pokemon-card'
 
 export const PokemonList = () => {
@@ -51,11 +52,18 @@ export const PokemonList = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 tablet:grid-cols-3 xl:grid-cols-4">
-          {pokemonList?.map((listItem) => {
-            return <PokemonCard key={crypto.randomUUID()} data={listItem} />
-          })}
-        </div>
+        <MotionWrapper
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25, ease: [0.33, 1, 0.68, 1] }}
+          exit={{ opacity: 0 }}
+        >
+          <div className="grid gap-4 sm:grid-cols-2 tablet:grid-cols-3 xl:grid-cols-4">
+            {pokemonList?.map((listItem) => {
+              return <PokemonCard key={crypto.randomUUID()} data={listItem} />
+            })}
+          </div>
+        </MotionWrapper>
       )}
     </section>
   )
