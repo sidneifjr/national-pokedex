@@ -17,7 +17,9 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 
 ### Dev
 
-1. Copy the **.env.example** file into a new **.env.local** file, them set the variable to the desired endpoint.
+1. Copy the **.env.example** file into a new **.env.local** file.
+
+There are no personal access keys to the API, so you can just copy it.
 
 2. `pnpm i`, for installing the dependencies.
 
@@ -51,7 +53,7 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 
 ## About
 
-This is the v2 release, developed after identifying the enhancement oportunities after tests conducted in v1.
+This is the v2 release, developed after identifying the enhancement oportunities during tests conducted in v1.
 
 **TailwindCSS** and **shadcn** were selected to speed up development, guarantee consistency and ease the development of high-quality interfaces. **shadcn** implements several solutions related to accessibility out-of-the-box, a bonus in several key metrics.
 
