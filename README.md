@@ -15,6 +15,12 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 
 ## Running
 
+### Branches
+
+**main** is the production branch.
+
+**dev** contains only work-in-progress. Whenever ready, it is merged to **main**.
+
 ### Dev
 
 1. Copy the **.env.example** file into a new **.env.local** file.
@@ -63,11 +69,15 @@ This is the v2 release, developed after identifying the enhancement oportunities
 
 **React Hook Form** was selected for its ease of use and performance advantages during form handling.
 
-**Vitest** offers a very significant performance impact in comparison to Jest, while maintaining a very similar API. Integrating with **Testing Library** offers a deeper layer of testing, while **user-event** allows triggering user events.
+**Vitest** offers a significant performance improvement in comparison to Jest, while maintaining a very similar API. Integrating with **Testing Library** offers a deeper layer of testing, while **user-event** allows triggering user events.
 
 **pnpm** is a fast and stable package manager, reusing packages efficiently across several projects.
 
 Ps.: During testing, it was identified that **GraphQL** would've been useful for typing and other functionalities, however it was not implemented due to time constraints.
+
+Usage of React Query with GraphQL solves the issue of caching with the latter, however if we are using Apollo, React Query is not needed.
+
+Apollo replaces React Query, SWR and others.
 
 ## Folder Structure
 
