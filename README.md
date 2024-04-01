@@ -14,6 +14,7 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 - [x] Unit Testing
 - [x] Animation on page change.
 - [x] Break pokemon-details test spec into smaller parts, for each module.
+- [x] Custom Hooks pattern, whenever applicable.
 
 ## Running
 
@@ -210,7 +211,11 @@ test/setup.ts: folder meant to setup the integration between Vitest and Testing 
 
 ## Patterns
 
-Composition Patterns were used frequently, by shadcn and my application's custom components. The intent is slicing each part of a component and importing it in a modular manner, facilitating maintenance, improving code legibility and allowing reuse of code.
+1) SOLID.
+
+2) Composition Pattern: used frequently by shadcn and my application's custom components. The intent is slicing each part of a component and importing it in a modular manner, facilitating maintenance, improving code legibility and allowing reuse of code.
+
+3) Custom Hooks: abstracting logic for API requests.
 
 ## Useful links
 
