@@ -17,7 +17,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
 
-    'no-console': "error",
+    'no-console': "warn",
     "react/no-unescaped-entities": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
