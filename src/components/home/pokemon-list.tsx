@@ -1,41 +1,12 @@
-import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
-
 import pokeball from '@/assets/pokeball.png'
-import { env } from '@/env'
+import { usePokemonList } from '@/hooks/usePokemonList'
 
 import { Loader } from '../loader'
 import { MotionWrapper } from '../motion-wrapper'
 import { PokemonCard } from './pokemon-card'
 
 export const PokemonList = () => {
-  /**
-   * 1) Create a function that will iterate between the url of each item in the array returned from the API.
-   * 2) Then, fetch those individual pokemon info and save it in the state.
-   */
-  const handlePokemonList = () => {
-    const endpoints = [] as string[]
-
-    for (let index = 1; index < 41; index++) {
-      endpoints.push(`${env.VITE_API_BASE_URL}/pokemon/${index}/`)
-    }
-
-    const fetchPokemonData = async () => {
-      const responses = await axios.all(
-        endpoints.map((endpoint) => axios.get(endpoint))
-      )
-
-      const pokemonData = responses.map((response) => response.data)
-      return pokemonData
-    }
-
-    return fetchPokemonData()
-  }
-
-  const { data: pokemonList, isLoading } = useQuery({
-    queryKey: ['pokemonList'],
-    queryFn: handlePokemonList,
-  })
+  const { pokemonList, isLoading } = usePokemonList()
 
   return (
     <section className="mx-auto w-full max-w-[1400px]">
