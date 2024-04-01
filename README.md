@@ -13,6 +13,7 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 - [x] Charts
 - [x] Unit Testing
 - [x] Animation on page change.
+- [x] Break pokemon-details test spec into smaller parts, for each module.
 
 ## Running
 
@@ -224,3 +225,5 @@ https://tkdodo.eu/blog/practical-react-query#treat-the-query-key-like-a-dependen
 https://stackoverflow.com/questions/71967007/how-to-fetch-with-parameters-using-react-query
 
 https://stackoverflow.com/questions/76081552/typeerror-cannot-destructure-property-basename-of-react-namespace-usecontex
+
+React Query DevTools: https://www.youtube.com/watch?v=yVsaCVEfPn4&list=TLPQMjQwMzIwMjRrlna4Mbw6Jg&index=3&pp=gAQBiAQB
