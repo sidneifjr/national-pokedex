@@ -2,10 +2,10 @@ import { useQuery } from '@apollo/client'
 import { Helmet } from 'react-helmet-async'
 
 import { PokemonList } from '@/components/home/pokemon-list'
-import { GET_POKEMON_ABILITY } from '@/queries/get-pokemon-abilities'
+import { GET_POKEMON } from '@/queries/get-pokemon'
 
 export const Home = () => {
-  const { data } = useQuery(GET_POKEMON_ABILITY)
+  const { data } = useQuery(GET_POKEMON)
   console.log(data)
 
   return (

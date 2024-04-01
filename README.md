@@ -15,6 +15,8 @@ It's possible to navigate in pages offering info regarding each pokémon, and al
 - [x] Animation on page change.
 - [x] Break pokemon-details test spec into smaller parts, for each module.
 - [x] Custom Hooks pattern, whenever applicable.
+- [ ] Change badge color according to current type. e.g.: red for fire, blue for water.
+- [ ] Experiment with GraphQL.
 
 ## Running
 
