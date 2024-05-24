@@ -6,4 +6,12 @@ const envSchema = z.object({
   VITE_API_BASE_URL_GRAPHQL: z.string().url(),
 })
 
-export const env = envSchema.parse(import.meta.env)
+const parsedEnv = envSchema.safeParse(import.meta.env)
+
+if(!parsedEnv.success) {
+  console.log('Invalid environment variables', parsedEnv.error.flatten().fieldErrors)
+
+  throw new Error('Invalid environment variables.')
+}
+
+export const env = parsedEnv.data
